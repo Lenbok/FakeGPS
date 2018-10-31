@@ -22,9 +22,9 @@ int firstrun = 1;
 
 // configure your timezone rules here how described on https://github.com/JChristensen/Timezone
 TimeChangeRule myDST =
-{ "NZDT", Last, Sun, Sep, 2, +780 };    //Daylight time = UTC + 13 hours
+{ "PDT", Second, Sun, Mar, 2, -420 };    //Daylight time = UTC - 7 hours
 TimeChangeRule mySTD =
-{ "NZST", First, Sun, Apr, 2, +720 };      //Standard time = UTC + 12 hours
+{ "PST", First, Sun, Nov, 2, -480 };      //Standard time = UTC - 8 hours
 Timezone myTZ(myDST, mySTD);
 
 void setup()
@@ -96,4 +96,3 @@ void loop()
 			digitalWrite(LED_BUILTIN, HIGH);			// switch off LED
 	}
 }
-
